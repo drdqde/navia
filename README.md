@@ -2,4 +2,4 @@
 
 NaViA is a web tool created to augmend the analysis of complex mass spectra obtained from native mass spectrometry.
 
-It can be reached under navia.github.io 
+It is currently in beta stage. 
