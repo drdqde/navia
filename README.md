@@ -6,3 +6,5 @@ It is currently in beta stage. Visit https://d-que.github.io/navia/ for trying i
 
 [![Watch the video](https://img.youtube.com/vi/v=rxaDmRCowT/maxresdefault.jpg)](https://www.youtube.com/watch?v=rxaDmRCowTo)
 
+The NaViA fileformat is is described [here](navia_fileformat.md)
+[
