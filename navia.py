@@ -13,7 +13,7 @@ from bokeh.events import ButtonClick, SelectionGeometry, Press, Tap
 from bokeh.util.compiler import JavaScript
 import imageio as iio
 
-output_file('index.html', title='Navia Beta v 0.9')
+output_file('index.html', title='Navia Beta v 0.10')
 
 # Usual format 1366x768
 plot_canvas = figure(plot_width=1366, plot_height=int(768/1), output_backend='canvas',
@@ -593,7 +593,7 @@ right_logo.axis.axis_line_alpha=0.0
 right_logo.axis.axis_label_text_alpha=0.0
 
 
-row0=Row(left_logo, Spacer(width=40), Div(text= "<h> <b>Na</b>tive Mass Spectra <b>Vi</b>sual <b>A</b>nalyser </h>", width= 716, height=70 , style={'font-size': '42px', 'color':'#002147'}, align='center'), right_logo)
+row0=Row(left_logo, Spacer(width=160), Div(text= "<h> <b>Na</b>tive <b>Vi</b>sual <b>A</b>nalyser </h>", width= 596, height=70 , style={'font-size': '42px', 'color':'#002147'}, align='center'), right_logo)
 row2b=Row(topleftspacer,Div(text= " <h2>Peaks of Active Series (m/z)</h2>", width= 580, height=35 ),Div(text= " <h2>Masses</h2>", width= 370, height=35 ), Div(text= " <h2>Notes on Spectrum</h2>", width= 280, height=35 ))
 layout = Column(row0, row1, row2, row2b, row3, mass_match_and_comment)
 dt_button.js_link('active', data_tools, 'visible')
