@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="navia_logo.svg"
+   inkscape:version="1.0rc1 (09960d6, 2020-04-09)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 79.375 26.458333"
+   height="100"
+   width="300">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="1050"
+     inkscape:window-width="1680"
+     height="100px"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="190.37931"
+     inkscape:cx="148.78912"
+     inkscape:zoom="2.1849694"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       id="text30"
+       y="21.611681"
+       x="0.70981073"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Avenir;-inkscape-font-specification:Avenir;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Avenir;-inkscape-font-specification:Avenir;fill:#002147;fill-opacity:1;stroke-width:0.264583"
+         y="21.611681"
+         x="0.70981073"
+         id="tspan28"
+         sodipodi:role="line">N  VI  </tspan></text>
+    <path
+       sodipodi:nodetypes="cacaacac"
+       inkscape:connector-curvature="0"
+       id="path855"
+       d="m 1.3688552,24.297764 c 0,0 14.7342778,2.198639 19.6676098,-2.179665 5.31156,-4.713979 4.845588,-20.7467759 4.845588,-20.7467759 0,0 0.07844,16.0440229 5.672644,20.2886539 7.629879,5.789208 21.155165,5.857515 28.732731,0 5.422819,-4.191879 5.180152,-19.8991299 5.180152,-19.8991299 0,0 -0.588515,14.7657159 3.798828,19.8991299 1.938358,2.267977 8.422823,3.027312 8.422823,3.027312"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.944924;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>

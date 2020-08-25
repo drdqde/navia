@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="100"
+   viewBox="0 0 79.375 26.458333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0rc1 (09960d6, 2020-04-09)"
+   sodipodi:docname="navia_logo.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2965">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2961" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0"
+         offset="1"
+         id="stop2963" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient895-6-8">
+      <stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop891" />
+      <stop
+         style="stop-color:#808080;stop-opacity:0;"
+         offset="1"
+         id="stop893" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient895-6-8"
+       id="linearGradient897"
+       x1="59.790769"
+       y1="13.138532"
+       x2="70.504721"
+       y2="13.138532"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2965"
+       id="linearGradient2967"
+       x1="72.050018"
+       y1="14.046726"
+       x2="25.910797"
+       y2="14.025635"
+       gradientUnits="userSpaceOnUse" />
+    <meshgradient
+       inkscape:collect="always"
+       id="meshgradient2977"
+       gradientUnits="userSpaceOnUse"
+       x="1.3065004"
+       y="1.3590488">
+      <meshrow
+         id="meshrow2979">
+        <meshpatch
+           id="meshpatch2981">
+          <stop
+             path="c 25.4773,0  50.9546,0  76.4319,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop2983" />
+          <stop
+             path="c 0,8.36366  0,16.7273  0,25.091"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop2985" />
+          <stop
+             path="c -25.4773,0  -50.9546,0  -76.4319,0"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop2987" />
+          <stop
+             path="c 0,-8.36366  0,-16.7273  0,-25.091"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop2989" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.1849694"
+     inkscape:cx="148.78912"
+     inkscape:cy="190.37931"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     height="100px"
+     inkscape:window-width="1680"
+     inkscape:window-height="1050"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Avenir;-inkscape-font-specification:Avenir;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="0.70981073"
+       y="21.611681"
+       id="text30"><tspan
+         sodipodi:role="line"
+         id="tspan28"
+         x="0.70981073"
+         y="21.611681"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Avenir;-inkscape-font-specification:Avenir;fill:#002147;fill-opacity:1;stroke-width:0.264583">N  VI  </tspan></text>
+    <path
+       style="fill:url(#linearGradient2967);fill-opacity:1;stroke:url(#meshgradient2977);stroke-width:0.845;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1.3688552,24.297764 c 0,0 14.7342778,2.198639 19.6676098,-2.179665 5.31156,-4.713979 4.845588,-20.7467759 4.845588,-20.7467759 0,0 0.07844,16.0440229 5.672644,20.2886539 7.629879,5.789208 21.155165,5.857515 28.732731,0 5.422819,-4.191879 5.180152,-19.8991299 5.180152,-19.8991299 0,0 -0.588515,14.7657159 3.798828,19.8991299 1.938358,2.267977 8.422823,3.027312 8.422823,3.027312"
+       id="path855"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cacaacac" />
+    <rect
+       style="fill:url(#linearGradient897);fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-miterlimit:3.3;stroke-dasharray:1.20000006,1.20000006;stroke-opacity:1;stroke-dashoffset:0;paint-order:markers stroke fill;opacity:1"
+       id="rect865"
+       width="10.413952"
+       height="24.58177"
+       x="59.940769"
+       y="0.84764725" />
+  </g>
+</svg>
