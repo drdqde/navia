@@ -202,7 +202,7 @@ if(act== "load_groel"){
     bg_mz.data = {'mz': [new_data['mz']], 'Intensity': [new_data['Intensity']]}
     console.log('mz sources set.');
     bg_mz.change.emit()
-    comment_window.value="Spectrum of GroEL."
+    comment_window.value="Spectrum of GroEL collected by Siyun Chen in the Robinson Group at the University of Oxford."
 
 }
 

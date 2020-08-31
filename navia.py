@@ -82,9 +82,9 @@ series_masses = AjaxDataSource(data=dict(Series=[], Mass=[], Uncertainty=[], Col
 aser_data = AjaxDataSource(data=dict(x_low=[], x_upp=[],  x_max=[],max_int=[], charge=[]))
 series_dict = AjaxDataSource(data=dict(series=series_names, names=series_names))
 
-groel_data=pd.read_csv('Testdata/20191205_GroEL_Native_20191205140734.txt', skiprows=10, delimiter='\t')
+groel_data=pd.read_csv('Testdata/siyun_groel.txt', skiprows=10, delimiter='\t')
 # groel_data.columns.values=[ 'Intensity']
-groel_data.rename(columns={'990.066090':'mz', '0.000000':'Intensity'}, inplace=True)
+groel_data.rename(columns={'1980.151514':'mz', '0.000000':'Intensity'}, inplace=True)
 # print(groel_data.columns.values)
 GroEL_mz = AjaxDataSource(data=groel_data)
 
