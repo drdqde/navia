@@ -343,7 +343,7 @@ mass_finder_mass = Slider(value=100, start=0.0, end=1000.0, step=10.0, title='Ma
 mass_finder_exact_mass_text = Div(text= "Enter excact Mass (Da)", width= 150, height=30 )
 mass_finder_exact_mass_sele = TextInput(value=str(mass_finder_mass.value*1000), disabled=False, width=100, height=30)
 
-mass_finder_line_text = Div(text= "Show mz precitions", width= 150, height=30 )
+mass_finder_line_text = Div(text= "Show mz prediction", width= 150, height=30 )
 mass_finder_line_sele = Toggle(label='off', active=False, width=100, height=30, callback=toggle_cb)
 
 mass_finder_cb =CustomJS(args=dict(mass_finder_line_sele=mass_finder_line_sele, raw_mz=raw_mz, mass_finder_data=mass_finder_data, mass_finder_exact_mass_sele=mass_finder_exact_mass_sele, mass_finder_mass=mass_finder_mass, mass_finder_range_slider=mass_finder_range_slider, mfl=mfl), code=open(os.path.join(os.getcwd(), 'JS_Functions', "mass_finder_cb.js")).read())
@@ -355,7 +355,7 @@ mass_finder.js_link('active', mass_finder_column, 'visible')
 mass_finder_line_sele.js_link('active', mfl, 'visible')
 mass_finder_mass.js_on_change('value', mass_finder_cb)
 mass_finder_line_sele.js_on_change('active', mass_finder_cb)
-
+mass_finder_range_slider.js_on_change('value',mass_finder_cb)
 ### DATA PROCESSING ###
 
 cropping = Div(text= " Range mz:", width= 150, height=30 )
@@ -435,17 +435,11 @@ for i_series in series_names:
     peakmz_sele.js_link('active', plsvg[i_series], 'visible')
 
 
-save4k_text= Button(label= " Create 4k figure (PNG): ", width= 150, height=30 )
+save4k_text= Button(label= " Create 4K PNG figure: ", width= 150, height=30, button_type='success')
 # save4k_text.js_link('active', highres_canvas, 'visible')
-savesvg_text= Button(label= " Create SVG figure (PNG): ", width= 150, height=30 )
+savesvg_text= Button(label= " Create SVG figure:  ", width= 150, height=30, button_type='success' )
 # savesvg_text.js_link('active', svg_canvas, 'visible')
 
-fig4k_cb=CustomJS(args=dict(plot_canvas=plot_canvas, svg_canvas=svg_canvas, highres_canvas=highres_canvas , series_names=series_names,\
-                  bg_mz=bg_mz, bg_mz4k=bg_mz4k, bg_mzsvg=bg_mzsvg, series_mz4k=series_mz4k, series_mzsvg=series_mzsvg, series_mz=series_mz), code=open(os.path.join(os.getcwd(), 'JS_Functions', "fig4k_cb.js")).read())
-figsvg_cb=CustomJS(args=dict(plot_canvas=plot_canvas, svg_canvas=svg_canvas, highres_canvas=highres_canvas , series_names=series_names,\
-                  bg_mz=bg_mz, bg_mz4k=bg_mz4k, bg_mzsvg=bg_mzsvg, series_mz4k=series_mz4k, series_mzsvg=series_mzsvg, series_mz=series_mz), code=open(os.path.join(os.getcwd(), 'JS_Functions', "figsvg_cb.js")).read())
-save4k_text.js_on_event(ButtonClick, fig4k_cb)
-savesvg_text.js_on_event(ButtonClick, figsvg_cb)
 
 
 linew_text= Div(text= " Line width ", width= 150, height=30 )
@@ -458,6 +452,9 @@ savesvg.toolbar = Toolbar(tools=svg_canvas.tools, logo=None)
 savesvg.toolbar_location ='above'
 graph_text=Column(grid_text, labels_text, ticks_text, axes_text, peakmz_text, linew_text)
 graph_act=Column(grid_sele, labels_sele, ticks_sele, axes_sele, peakmz_sele, linew_inp)
+
+savesvg.visible=False
+save4k.visible=False
 
 posneg_text = Div(text= " Ion Charge", width= 150, height=30 )
 data_header = Div(text= " <h2>Data Processing</h2>", height=45, width=400 )
@@ -498,9 +495,15 @@ set_range.js_on_event(ButtonClick, range_cb)
 
 graph_layout= Column(graph_header, row_graphic, Row(save4k_text, save4k), Row(savesvg_text, savesvg), fig_text, window_header, range_row, Row(set_spacer, set_range), visible=False)
 
-
 graph_opt.js_link('active', graph_layout, 'visible')
 
+fig4k_cb=CustomJS(args=dict(save4k=save4k, plot_canvas=plot_canvas, svg_canvas=svg_canvas, highres_canvas=highres_canvas , series_names=series_names,\
+                  bg_mz=bg_mz, bg_mz4k=bg_mz4k, bg_mzsvg=bg_mzsvg, series_mz4k=series_mz4k, series_mzsvg=series_mzsvg, series_mz=series_mz,save4k_text=save4k_text), code=open(os.path.join(os.getcwd(), 'JS_Functions', "fig4k_cb.js")).read())
+figsvg_cb=CustomJS(args=dict(savesvg=savesvg, plot_canvas=plot_canvas, svg_canvas=svg_canvas, highres_canvas=highres_canvas , series_names=series_names,\
+                  bg_mz=bg_mz, bg_mz4k=bg_mz4k, bg_mzsvg=bg_mzsvg, series_mz4k=series_mz4k, series_mzsvg=series_mzsvg, series_mz=series_mz,savesvg_text=savesvg_text), code=open(os.path.join(os.getcwd(), 'JS_Functions', "figsvg_cb.js")).read())
+
+save4k_text.js_on_event(ButtonClick, fig4k_cb)
+savesvg_text.js_on_event(ButtonClick, figsvg_cb)
 
 graphics_cb=CustomJS(args=dict(linew_txt=linew_inp, ticks_sele=ticks_sele, labels_sele=labels_sele, grid_sele=grid_sele, \
                   plot_canvas=plot_canvas, highres_canvas=highres_canvas, sel_lines=sel_lines, sel_linessvg=sel_linessvg, sel_lines4k=sel_lines4k, series_names=series_names), code=open(os.path.join(os.getcwd(), 'JS_Functions', "graphics_cb.js")).read())

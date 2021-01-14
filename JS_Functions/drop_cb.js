@@ -323,7 +323,7 @@ if (act == 'load_sess'){
             posneg.value = charge_sign
             comment_window.value = comment
             series_masses.data = masses;
-
+            
             names = series_names;
             ser_act.options=['Background', 'New Series']
             /// remember i in x gives ith element

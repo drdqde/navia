@@ -426,7 +426,6 @@ function DoMacSED(masses, ser_data, names, series_masses, posneg, series_colours
             MacSED_res[1].push(mass_res[0])
             MacSED_res[2].push(mass_res[1])
             MacSED_res[3].push(series_colours_DS.data['colour'][i_ser])
-
         }
     }
     console.log({masses})

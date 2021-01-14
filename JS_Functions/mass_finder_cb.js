@@ -10,7 +10,7 @@ if((raw_mz.data['mz'].length > 0) && (mass_finder_line_sele.active == true)){
  	var z_min = Math.ceil(mass_finder_range_slider.value[0])//parseFloat(comp_mass) / (parseFloat(mz_max)+0.1))
 	var z_max = Math.floor(mass_finder_range_slider.value[1])//parseFloat(comp_mass) / (parseFloat(mz_min)+0.1))
 
- 	for (z=z_min; z<z_max; z++){
+ 	for (z=z_min; z<=z_max; z++){
  		mz_pred= Number(comp_mass) / z
  		if((mz_min < mz_pred) && (mz_pred < mz_max)){
  			mf_data["ys"].push([0.0, 100.0])
