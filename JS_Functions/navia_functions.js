@@ -109,8 +109,8 @@ function peakprediction(masses,ser_data, act, raw_mz){
 
             var mz_min = raw_mz.data['mz'][0]//prompt("Lower m/z bound", "1000.0");
             var mz_max = raw_mz.data['mz'][raw_mz.data['mz'].length-1]//prompt("Upper m/z bound", "2000.0");
-            
-            if((mz_min < ppm_low - 5 * pps_std_low ) && (ppm_low + 5 * pps_std_low] < mz_max)){ 
+            // correct if prediction is out of range of m/z
+            if((mz_min < ppm_low - 5 * pps_std_low ) && (ppm_low + 5 * pps_std_low < mz_max)){ 
                 ppm_data['xs'].push([ppm_low, ppm_low])
                 ppm_data['ys'].push([0.0, 100.0])
                 pps_data['xs'].push([ppm_low - 5 * pps_std_low, ppm_low - 5 * pps_std_low])
@@ -118,7 +118,7 @@ function peakprediction(masses,ser_data, act, raw_mz){
                 pps_data['ys'].push([0.0, 100.0])
                 pps_data['ys'].push([0.0, 100.0])
             }
-            if((ppm_upp < ppm_low) && (ppm_upp < mz_max)){ 
+            if((mz_min < ppm_upp + 5 * pps_std_upp) && (ppm_upp + 5 * pps_std_upp < mz_max)){ 
                 ppm_data['xs'].push([ppm_upp, ppm_upp])
                 ppm_data['ys'].push([0.0, 100.0])
                 pps_data['xs'].push([ppm_upp - 5 * pps_std_upp, ppm_upp - 5 * pps_std_upp])
