@@ -13,7 +13,7 @@ from bokeh.events import ButtonClick, SelectionGeometry, Press, Tap
 from bokeh.util.compiler import JavaScript
 import imageio as iio
 
-output_file('index.html', title='Navia Beta v 0.10')
+output_file('index.html', title='NaViA  v 1.0')
 
 # Usual format 1366x768
 plot_canvas = figure(plot_width=1366, plot_height=int(768/1), output_backend='canvas',
@@ -340,7 +340,7 @@ mass_finder_range_slider = RangeSlider(start=1.0, end=500.0, value=(1.0,50.0), t
 # mass_finder_mass_text = Div(text= " Mass of Complex (kDa):", width= 150, height=30 )
 mass_finder_mass = Slider(value=100, start=0.0, end=1000.0, step=10.0, title='Mass of Complex (kDa)',name='gau_sigma', width=250, height=30)
 
-mass_finder_exact_mass_text = Div(text= "Enter excact Mass (Da)", width= 150, height=30 )
+mass_finder_exact_mass_text = Div(text= "Enter exact Mass (Da)", width= 150, height=30 )
 mass_finder_exact_mass_sele = TextInput(value=str(mass_finder_mass.value*1000), disabled=False, width=100, height=30)
 
 mass_finder_line_text = Div(text= "Show mz prediction", width= 150, height=30 )

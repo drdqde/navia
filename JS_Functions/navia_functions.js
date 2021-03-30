@@ -88,7 +88,7 @@ function MacSED(series_i_max, posneg){
 
 }
 
-function peakprediction(masses,ser_data, act){
+function peakprediction(masses,ser_data, act, raw_mz){
     var ppm_data = { "xs":[], "ys":[] }
     var pps_data = { "xs":[], "ys":[] }
 
@@ -107,19 +107,25 @@ function peakprediction(masses,ser_data, act){
             pps_std_low = masses['Uncertainty'][i_act] / (ser_data[act]['charge'][0] + 1)
             pps_std_upp = masses['Uncertainty'][i_act] / (ser_data[act]['charge'][ser_data[act]['charge'].length -1] - 1)
 
-            ppm_data['xs'].push([ppm_low, ppm_low])
-            ppm_data['xs'].push([ppm_upp, ppm_upp])
-            ppm_data['ys'].push([0.0, 100.0])
-            ppm_data['ys'].push([0.0, 100.0])
-
-            pps_data['xs'].push([ppm_low - 5 * pps_std_low, ppm_low - 5 * pps_std_low])
-            pps_data['xs'].push([ppm_low + 5 * pps_std_low, ppm_low + 5 * pps_std_low])
-            pps_data['xs'].push([ppm_upp - 5 * pps_std_upp, ppm_upp - 5 * pps_std_upp])
-            pps_data['xs'].push([ppm_upp + 5 * pps_std_upp, ppm_upp + 5 * pps_std_upp])
-            pps_data['ys'].push([0.0, 100.0])
-            pps_data['ys'].push([0.0, 100.0])
-            pps_data['ys'].push([0.0, 100.0])
-            pps_data['ys'].push([0.0, 100.0])
+            var mz_min = raw_mz.data['mz'][0]//prompt("Lower m/z bound", "1000.0");
+            var mz_max = raw_mz.data['mz'][raw_mz.data['mz'].length-1]//prompt("Upper m/z bound", "2000.0");
+            
+            if((mz_min < ppm_low - 5 * pps_std_low ) && (ppm_low + 5 * pps_std_low] < mz_max)){ 
+                ppm_data['xs'].push([ppm_low, ppm_low])
+                ppm_data['ys'].push([0.0, 100.0])
+                pps_data['xs'].push([ppm_low - 5 * pps_std_low, ppm_low - 5 * pps_std_low])
+                pps_data['xs'].push([ppm_low + 5 * pps_std_low, ppm_low + 5 * pps_std_low])
+                pps_data['ys'].push([0.0, 100.0])
+                pps_data['ys'].push([0.0, 100.0])
+            }
+            if((ppm_upp < ppm_low) && (ppm_upp < mz_max)){ 
+                ppm_data['xs'].push([ppm_upp, ppm_upp])
+                ppm_data['ys'].push([0.0, 100.0])
+                pps_data['xs'].push([ppm_upp - 5 * pps_std_upp, ppm_upp - 5 * pps_std_upp])
+                pps_data['xs'].push([ppm_upp + 5 * pps_std_upp, ppm_upp + 5 * pps_std_upp])
+                pps_data['ys'].push([0.0, 100.0])
+                pps_data['ys'].push([0.0, 100.0])
+            }
         }
     }
     pp_mean_data.data = ppm_data;
