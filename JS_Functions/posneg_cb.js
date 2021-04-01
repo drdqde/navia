@@ -16,16 +16,16 @@ var act_data=aser_data.data;
 var masses = series_masses.data;
 
 var names = series_names;
-
+console.log('1 ok')
 /// remember i in x gives ith element
 for(i_ser in names){
     sele[names[i_ser]]=series_sele[names[i_ser]].data;
     ser_data[names[i_ser]]=series_data[names[i_ser]].data;
     peak_data[names[i_ser]]=peak_mz[names[i_ser]].data;
 }
-
+console.log('2 ok')
 
 /// Boolean to decide whether to append new selection
 
-DoMacSED(masses, ser_data, names, series_masses, posneg)
+DoMacSED(masses, ser_data, names, series_masses, posneg,series_colours_DS)
 data2active_table(ser_data[act], aser_data, act);

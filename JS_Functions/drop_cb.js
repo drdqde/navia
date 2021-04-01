@@ -361,7 +361,7 @@ if (act == 'load_sess'){
             process_data.button_type='warning'
             process_data.label='Reprocess Data'
             data2sources(names, sele, proc_mz.data, series_mz);
-            peakprediction(masses,ser_data, act);
+            peakprediction(masses,ser_data, act,proc_mz.data);
             data2active_table(ser_data[act], aser_data, act);
         }
     }

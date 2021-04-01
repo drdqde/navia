@@ -32,7 +32,7 @@ for(i_ser in names){
     }
 sele_lines['Background']=sel_lines['Background'];
 
-peakprediction(masses, ser_data, act);
+peakprediction(masses, ser_data, act, proc_mz.data);
 if(act != 'Background'){
     col.color = sele_lines[act].line_color.value;
 	pp_mean.line_color.value = sele_lines[act].line_color.value;

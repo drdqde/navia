@@ -66,6 +66,6 @@ console.log('yep')
 
 DoMacSED(masses, ser_data, names, series_masses, posneg, series_colours_DS)
 
-peakprediction(masses,ser_data, act);
+peakprediction(masses,ser_data, act, data);
 
 data2active_table(ser_data[act], aser_data, act);

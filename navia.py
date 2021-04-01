@@ -132,13 +132,13 @@ ser_act_menu=[('Background (Eraser)', 'Background'), ('New Series', 'New Series'
 
 ser_act = Dropdown(label="Create Series", value='Background', menu=ser_act_menu, width=140, height=30)
  
-col_cb = CustomJS(args=dict(series_data=series_data, pp_mean_data=pp_mean_data, pp_std_data=pp_std_data, plot_canvas=plot_canvas, peak_lines=peak_lines, peak_lines4k=peak_lines4k, series_colours_DS=series_colours_DS, series_names=series_names, sel_lines=sel_lines, ser_act=ser_act, pp_mean= pp_mean, pp_std=pp_std, series_masses=series_masses)
+col_cb = CustomJS(args=dict(proc_mz=proc_mz, series_data=series_data, pp_mean_data=pp_mean_data, pp_std_data=pp_std_data, plot_canvas=plot_canvas, peak_lines=peak_lines, peak_lines4k=peak_lines4k, series_colours_DS=series_colours_DS, series_names=series_names, sel_lines=sel_lines, ser_act=ser_act, pp_mean= pp_mean, pp_std=pp_std, series_masses=series_masses)
     , code=open(os.path.join(os.getcwd(), 'JS_Functions', "navia_functions.js")).read() + open(os.path.join(os.getcwd(), 'JS_Functions', "col_cb.js")).read())
 
 col = ColorPicker(color='black', width=50, height=30, disabled=False, callback=col_cb)
 ser_match = Select(value='', options=[], title='Stoich. Calculation Series:', width=150, height=45)
 
-ser_callback = CustomJS(args=dict(series_colours_DS=series_colours_DS, series_names=series_names, sel_lines=sel_lines, sel_lines4k=sel_lines4k, peak_lines=peak_lines,peak_lines4k=peak_lines4k, col=col, aser_data=aser_data, ser_match=ser_match,
+ser_callback = CustomJS(args=dict(proc_mz=proc_mz,series_colours_DS=series_colours_DS, series_names=series_names, sel_lines=sel_lines, sel_lines4k=sel_lines4k, peak_lines=peak_lines,peak_lines4k=peak_lines4k, col=col, aser_data=aser_data, ser_match=ser_match,
                         series_data=series_data, pp_mean= pp_mean, pp_std=pp_std, pp_mean_data=pp_mean_data, pp_std_data=pp_std_data, series_masses=series_masses, plot_canvas=plot_canvas), 
                         code=open(os.path.join(os.getcwd(), 'JS_Functions', "navia_functions.js")).read() + open(os.path.join(os.getcwd(), 'JS_Functions', "ser_cb.js")).read())
 

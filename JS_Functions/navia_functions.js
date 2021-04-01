@@ -88,7 +88,7 @@ function MacSED(series_i_max, posneg){
 
 }
 
-function peakprediction(masses,ser_data, act, raw_mz){
+function peakprediction(masses,ser_data, act, data){
     var ppm_data = { "xs":[], "ys":[] }
     var pps_data = { "xs":[], "ys":[] }
 
@@ -107,8 +107,8 @@ function peakprediction(masses,ser_data, act, raw_mz){
             pps_std_low = masses['Uncertainty'][i_act] / (ser_data[act]['charge'][0] + 1)
             pps_std_upp = masses['Uncertainty'][i_act] / (ser_data[act]['charge'][ser_data[act]['charge'].length -1] - 1)
 
-            var mz_min = raw_mz.data['mz'][0]//prompt("Lower m/z bound", "1000.0");
-            var mz_max = raw_mz.data['mz'][raw_mz.data['mz'].length-1]//prompt("Upper m/z bound", "2000.0");
+            var mz_min = data['mz'][0]//prompt("Lower m/z bound", "1000.0");
+            var mz_max = data['mz'][data['mz'].length-1]//prompt("Upper m/z bound", "2000.0");
             // correct if prediction is out of range of m/z
             if((mz_min < ppm_low - 5 * pps_std_low ) && (ppm_low + 5 * pps_std_low < mz_max)){ 
                 ppm_data['xs'].push([ppm_low, ppm_low])
